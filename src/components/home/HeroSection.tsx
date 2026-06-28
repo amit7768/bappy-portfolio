@@ -32,27 +32,29 @@ export default function HeroSection() {
           Architect · Visualizer · Interior Designer
         </p>
 
-        <h1 className="font-serif text-white text-[clamp(2.5rem,8vw,5.5rem)] leading-[1.0]">
+        <h1 className="font-serif text-white text-[clamp(2.8rem,5.5vw,5rem)] leading-[1.0]">
           <span className="block overflow-hidden">
-            <span className="hero-word inline-block">Md. Mahmudul</span>
+            <span className="hero-word inline-block whitespace-nowrap max-[380px]:whitespace-normal">
+              Md. Mahmudul
+            </span>
           </span>
           <span className="block overflow-hidden">
-            <span className="hero-word inline-block">Hasan</span>
-          </span>
-          <span className="block overflow-hidden">
-            <span className="hero-word inline-block">Bappy</span>
+            <span className="hero-word inline-block whitespace-nowrap max-[380px]:whitespace-normal">
+              Hasan Bappy
+            </span>
           </span>
         </h1>
 
-        <p className="hero-tagline font-serif italic text-xl md:text-2xl mt-6 text-white/85">
-          Architecture that lives between
-          <br />
-          the sketch and the sky.
+        <p className="hero-tagline font-serif italic text-xl md:text-2xl mt-6 text-white/85 whitespace-normal sm:whitespace-nowrap">
+          Architecture that lives between the sketch and the sky.
         </p>
 
-        <p className="hero-meta font-mono text-xs text-white/60 mt-8">
-          Dhaka, Bangladesh · KUET Dept. of Architecture
-        </p>
+        <div className="hero-meta mt-8">
+
+          <p className="font-sans text-sm font-light italic text-white/70 mt-1">
+            Designing spaces that breathe — where structure meets soul.
+          </p>
+        </div>
 
         <div className="flex gap-4 mt-8">
           <Link

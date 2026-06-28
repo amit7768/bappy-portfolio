@@ -1,6 +1,7 @@
 import HeroSection from '@/components/home/HeroSection'
 import TickerStrip from '@/components/home/TickerStrip'
 import StatsStrip from '@/components/home/StatsStrip'
+import ImageStrip from '@/components/home/ImageStrip'
 import FeaturedWork from '@/components/home/FeaturedWork'
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <TickerStrip />
       <StatsStrip />
+      <ImageStrip />
       <FeaturedWork />
     </>
   )

@@ -23,7 +23,7 @@ const FEATURED: FeaturedItem[] = [
   },
   {
     title: 'Monument of Resistance',
-    href: '/about',
+    href: '/projects?tab=academic',
     img: '/assets/monument-render.jpg',
   },
   {
@@ -41,7 +41,7 @@ export default function FeaturedWork() {
       <div className="grid md:grid-cols-3 gap-6 mt-6">
         {FEATURED.map((item, i) => (
           <RevealText key={item.title} delay={i * 0.1}>
-            <Link href={item.href} className="block reveal-item group">
+            <Link href={item.href} className="block reveal-item group cursor-pointer">
               <div className="relative aspect-[4/5] overflow-hidden bg-paper-dim dark:bg-paper-dim-dark">
                 {item.img && (
                   <div className="absolute inset-0 transition-transform duration-[600ms] ease-out group-hover:scale-[1.08]">
