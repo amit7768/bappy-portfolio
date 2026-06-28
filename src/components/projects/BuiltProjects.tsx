@@ -1,0 +1,39 @@
+import { BUILT_PROJECTS } from '@/data/built'
+import SheetRef from '@/components/ui/SheetRef'
+import SectionLabel from '@/components/ui/SectionLabel'
+import BuiltCarousel from './BuiltCarousel'
+
+export default function BuiltProjects() {
+  return (
+    <div>
+      <SectionLabel label="Built Projects" count={`${BUILT_PROJECTS.length} Projects`} />
+
+      <div className="flex flex-col gap-16">
+        {BUILT_PROJECTS.map((project) => (
+          <div key={project.sheet} className="grid md:grid-cols-2 gap-8 items-start">
+            <div>
+              <SheetRef sheet={project.sheet} />
+              <h3 className="font-serif text-3xl mt-2">{project.title}</h3>
+              <p className="font-mono text-xs text-ink-faint dark:text-ink-faint-dark mt-2">
+                {project.role} · {project.year} · {project.location}
+              </p>
+              <div className="flex flex-wrap gap-2 mt-3">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="font-mono text-[10px] uppercase tracking-widest text-ink-faint dark:text-ink-faint-dark border border-rule dark:border-rule-dark px-2 py-1"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <p className="text-sm text-ink-soft dark:text-ink-soft-dark mt-4 max-w-xl">{project.desc}</p>
+            </div>
+
+            <BuiltCarousel images={project.images} projectTitle={project.title} />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}

@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# env files
+.env
+.env.local
+.env*.local
+
+# videos (too large for git — keep local only)
+public/videos/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel
