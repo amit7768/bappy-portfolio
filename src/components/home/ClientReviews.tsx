@@ -68,8 +68,6 @@ const REVIEWS: ClientReview[] = [
   },
 ]
 
-const ROW1 = [REVIEWS[0], REVIEWS[1], REVIEWS[2], REVIEWS[3], REVIEWS[4]]
-const ROW2 = [REVIEWS[2], REVIEWS[0], REVIEWS[4], REVIEWS[1], REVIEWS[3]]
 
 function flagEmoji(code: string): string {
   return code
@@ -156,7 +154,15 @@ function ReviewCard({ review }: { review: ClientReview }) {
 export default function ClientReviews() {
   const sectionRef = useRef<HTMLElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
-  const rowsRef = useRef<HTMLDivElement>(null)
+  const rowRef = useRef<HTMLDivElement>(null)
+  const marqueeRef = useRef<HTMLDivElement>(null)
+
+  const pauseMarquee = () => {
+    if (marqueeRef.current) marqueeRef.current.style.animationPlayState = 'paused'
+  }
+  const resumeMarquee = () => {
+    if (marqueeRef.current) marqueeRef.current.style.animationPlayState = 'running'
+  }
 
   useGSAP(
     () => {
@@ -174,14 +180,14 @@ export default function ClientReviews() {
         })
       }
 
-      if (rowsRef.current) {
-        gsap.from(rowsRef.current, {
+      if (rowRef.current) {
+        gsap.from(rowRef.current, {
           opacity: 0,
           duration: 0.8,
           delay: 0.3,
           ease: 'power2.out',
           scrollTrigger: {
-            trigger: rowsRef.current,
+            trigger: rowRef.current,
             start: 'top 90%',
             toggleActions: 'play none none none',
           },
@@ -220,22 +226,17 @@ export default function ClientReviews() {
         </div>
       </div>
 
-      {/* Marquee rows — reviews-track enables pause-on-hover for both rows */}
-      <div ref={rowsRef} className="reviews-track flex flex-col gap-4">
-        <div className="overflow-hidden">
-          <div className="marquee-left flex">
-            {[...ROW1, ...ROW1].map((review, i) => (
-              <ReviewCard key={`r1-${i}`} review={review} />
-            ))}
-          </div>
-        </div>
-
-        <div className="overflow-hidden">
-          <div className="marquee-right flex">
-            {[...ROW2, ...ROW2].map((review, i) => (
-              <ReviewCard key={`r2-${i}`} review={review} />
-            ))}
-          </div>
+      {/* Single marquee row */}
+      <div
+        ref={rowRef}
+        className="overflow-hidden"
+        onMouseEnter={pauseMarquee}
+        onMouseLeave={resumeMarquee}
+      >
+        <div ref={marqueeRef} className="flex gap-6 marquee-left w-max">
+          {[...REVIEWS, ...REVIEWS].map((review, i) => (
+            <ReviewCard key={i} review={review} />
+          ))}
         </div>
       </div>
 
