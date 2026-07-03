@@ -53,6 +53,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
       className={`${dmSerif.variable} ${dmSans.variable} ${ibmMono.variable}`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var origError = window.onerror;
+                window.onerror = function(msg, src, line, col, err) {
+                  if (typeof msg === 'string' && msg.indexOf('Cannot set properties of undefined') !== -1) return true;
+                  return origError ? origError.apply(this, arguments) : false;
+                };
+              })();
+            `,
+          }}
+        />
+      </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <div id="scroll-progress" />

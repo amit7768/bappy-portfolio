@@ -2,6 +2,7 @@ import { BUILT_PROJECTS } from '@/data/built'
 import SheetRef from '@/components/ui/SheetRef'
 import SectionLabel from '@/components/ui/SectionLabel'
 import BuiltCarousel from './BuiltCarousel'
+import MoreComingPanel from '@/components/ui/MoreComingPanel'
 
 export default function BuiltProjects() {
   return (
@@ -34,6 +35,13 @@ export default function BuiltProjects() {
           </div>
         ))}
       </div>
+
+      <MoreComingPanel
+        heading="More commissions in progress."
+        sub="Currently working with residential and commercial clients in Dhaka. Inquiries welcome."
+        ctaText="Get in touch →"
+        ctaHref="/contact"
+      />
     </div>
   )
 }

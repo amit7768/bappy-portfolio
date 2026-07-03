@@ -19,8 +19,8 @@ const config: Config = {
           soft: '#58584F',
           faint: '#9A9A90',
           dark: '#EDECE8',
-          'soft-dark': '#888880',
-          'faint-dark': '#555550',
+          'soft-dark': '#B8B8B0',
+          'faint-dark': '#7A7A72',
         },
         rule: {
           DEFAULT: '#E0DFDA',

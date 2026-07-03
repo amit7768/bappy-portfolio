@@ -2,23 +2,24 @@ import Image from 'next/image'
 import { driveImg } from '@/lib/drive'
 
 const IMAGES = [
-  '1BPm_jx9ZMMfrFi76KPBpu4Oy9ZCrqWRi',
-  '1cLC6edWzue-EkjhT1Q2xIZVxwvMfiZAL',
-  '1ScYhBZHz6D1te-tPzuHo9eRLBCf9TKRw',
+  driveImg('1BPm_jx9ZMMfrFi76KPBpu4Oy9ZCrqWRi', 'w1200'),
+  'https://drive.google.com/thumbnail?id=12rkCQ6YpY5H6IVHBzylomz-SbWsYJfDy&sz=w1200',
+  driveImg('1ScYhBZHz6D1te-tPzuHo9eRLBCf9TKRw', 'w1200'),
 ]
 
 export default function ImageStrip() {
   return (
-    <div className="w-full grid grid-cols-3 gap-0 h-48 md:h-72">
-      {IMAGES.map((id) => (
-        <div key={id} className="relative overflow-hidden">
+    <div className="w-full grid grid-cols-[repeat(3,1fr)] gap-0 h-56 md:h-80">
+      {IMAGES.map((src) => (
+        <div key={src} className="relative overflow-hidden h-full">
           <Image
-            src={driveImg(id, 'w1200')}
+            src={src}
             alt="Architectural visualization"
             fill
             sizes="33vw"
             unoptimized
-            className="object-cover object-center transition-transform duration-500 ease-out hover:scale-105"
+            style={{ objectFit: 'cover', objectPosition: 'center center' }}
+            className="transition-transform duration-500 ease-out hover:scale-105"
           />
         </div>
       ))}

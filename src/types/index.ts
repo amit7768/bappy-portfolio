@@ -2,7 +2,7 @@ export interface AcademicProject {
   sheet: string
   title: string
   tags: string[]
-  year: string
+  year?: string
   location: string
   desc: string
   img: string | null

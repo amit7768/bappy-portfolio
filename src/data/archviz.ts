@@ -2,7 +2,7 @@ import type { ArchvizRender, ArchvizVideo } from '@/types'
 import { driveImg } from '@/lib/drive'
 
 export const ARCHVIZ_RENDERS: ArchvizRender[] = [
-  { id: '1CvTgpIA9FiIvY8MNbFtbitIn64cZFjxt', cap: 'Interior render — warm evening light' },
+  { id: '1CvTgpIA9FiIvY8MNbFtbitIn64cZFjxt', cap: 'Interior — warm evening light' },
   { id: '17Aoxaio_aYYgV0IwdrSrxrwC0WU9E9Cm', cap: 'Architectural visualization' },
   { id: '1R1z0qATaD9BzUN95k5jg7USPGascs39g', cap: 'Exterior study' },
   { id: '1PxUcq_9AtgmynK_uJu4UA1RjVU3wzWby', cap: 'Material study render' },
@@ -13,7 +13,7 @@ export const ARCHVIZ_RENDERS: ArchvizRender[] = [
   { id: '1907b-2VBIe4wTBDxcpE6mXmj56WjO6u4', cap: 'Volumetric study' },
   { id: '1eRvCGzmpWmhg0VcviOy8TP2Pq1SbRnJ2', cap: 'Texture and material' },
   { id: '17C-rTW-vGqJLMs6hGgNn0CbOp8NWqumf', cap: 'Spatial composition' },
-  { id: '1Cy0EzbNykqDJYpW6RxlCLC5NJqKKeOJw', cap: 'Render — golden hour' },
+  { id: '1Cy0EzbNykqDJYpW6RxlCLC5NJqKKeOJw', cap: 'Golden hour render' },
   { id: '1KTqzWfz8VsjtR6HEaFixTGpaXNCNZrka', cap: 'Architectural render' },
   { id: '13Q3ET4tv1KwQlYjF-xASOcMaeni5FMKB', cap: 'Detail render' },
   { id: '1wUoPjjH2NY2EOZqDUzV4YlLxIJ-C4vUW', cap: 'Studio visualization' },
@@ -23,10 +23,13 @@ export const ARCHVIZ_RENDERS: ArchvizRender[] = [
   { id: '1TMwlBU4SopekE4cFR3tItikycCANGYVD', cap: 'Night render' },
   { id: '1GwJpBmHYyHwMGYv3yU23XMKyxl34dZc7', cap: 'Composition study' },
   { id: '1-3uHlG5OHShaFvA3FPBKEzecMYpo7_FH', cap: 'Architectural detail' },
-  { id: '1UdlFMDs3k1Qe3z24EXFpzzekgpxy90Ta', cap: 'Render study 4' },
+  { id: '1UdlFMDs3k1Qe3z24EXFpzzekgpxy90Ta', cap: 'Render study' },
   { id: '1UvFxZ4WN27R8CIwgZCqf0DWjAkbtC0Rv', cap: 'Spatial render' },
   { id: '1OOr2BH3w4atY3qr2ggt9Ke4fAwDiCiE9', cap: 'Volume study' },
   { id: '10n48hkPUfHWQy41nA4eU-ofpvE9w5cSV', cap: 'Final render' },
+  { id: '17Puqo-nTXha6JCIes3__a0AI-BiIA0E7', cap: 'Visualization study' },
+  { id: '13EyNQxQpwDkRCzskvcgWm3vDTHr2gFnj', cap: 'Perspective study' },
+  { id: '1OOr2BH3w4atY3qr2ggt9Ke4fAwDiCiE9', cap: 'Render composition' },
 ]
 
 export const ARCHVIZ_VIDEOS: ArchvizVideo[] = [
