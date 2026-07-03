@@ -56,3 +56,16 @@ export interface ContactInfo {
   location: string
   socials: SocialLink[]
 }
+
+export interface ClientReview {
+  id: number
+  name: string
+  country: string
+  countryCode: string
+  rating: number
+  text: string
+  service: string
+  duration: string
+  verified: boolean
+  repeatClient?: boolean
+}
