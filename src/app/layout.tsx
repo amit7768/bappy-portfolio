@@ -30,6 +30,9 @@ const ibmMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
+  verification: {
+    google: '4U-Kd34EpXpCcDweqa23c9YDa2Etr_kYfoxWaONhrmw',
+  },
   title: 'Mahmudul Hasan Bappy — Architect & Visualizer',
   description:
     'Portfolio of Md. Mahmudul Hasan Bappy — Architect, Architectural Visualizer, and Interior Designer based in Dhaka, Bangladesh. KUET Department of Architecture.',
