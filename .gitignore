@@ -18,4 +18,5 @@ Thumbs.db
 # Vercel
 .vercel
 
-.vercel
+# Playwright
+.playwright-mcp/
