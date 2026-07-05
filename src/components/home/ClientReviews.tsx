@@ -94,19 +94,21 @@ function StarRating({ rating }: { rating: number }) {
 function ReviewCard({ review }: { review: ClientReview }) {
   const initial = review.name[0].toUpperCase()
   return (
-    <div className="w-80 flex-shrink-0 mr-4 p-6 bg-paper-card border border-rule shadow-sm">
-      <StarRating rating={review.rating} />
+    <div className="w-80 flex-shrink-0 mr-4 p-6 bg-paper-card border border-rule shadow-sm flex flex-col min-h-[280px]">
+      <div className="flex-shrink-0">
+        <StarRating rating={review.rating} />
+      </div>
 
       <div className="mt-3">
         <div className="font-serif text-4xl text-accent-red/20 leading-none mb-1 select-none">
           &ldquo;
         </div>
-        <p className="text-sm leading-relaxed text-ink line-clamp-4">
+        <p className="text-sm leading-relaxed text-ink line-clamp-5">
           {review.text}
         </p>
       </div>
 
-      <div className="border-t border-rule mt-4 pt-4">
+      <div className="border-t border-rule mt-auto pt-4 flex-shrink-0">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-ink flex items-center justify-center flex-shrink-0">
             <span className="font-mono text-sm text-paper leading-none">
@@ -131,7 +133,7 @@ function ReviewCard({ review }: { review: ClientReview }) {
         </div>
       </div>
 
-      <div className="mt-3">
+      <div className="mt-3 flex-shrink-0">
         <span className="font-mono text-[10px] text-ink-faint uppercase tracking-wider">
           {review.service}
         </span>
@@ -193,7 +195,7 @@ export default function ClientReviews() {
         <SectionLabel label="Client Reviews" count="4 Reviews" />
 
         <div className="flex items-center gap-4 mt-6 flex-wrap">
-          <span className="font-serif text-5xl text-ink leading-none">4.6</span>
+          <span className="font-serif text-5xl text-ink leading-none">5.0</span>
           <div className="flex items-center gap-0.5">
             {Array.from({ length: 5 }).map((_, i) => (
               <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#B91C1C">

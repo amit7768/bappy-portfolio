@@ -40,16 +40,30 @@ const FEATURED: FeaturedItem[] = [
     img: localImg('bp-01-narinda-1.jpg'),
     sheet: 'BP-01',
   },
+  {
+    title: 'Duplex Villa at Jatrabari',
+    href: '/projects?tab=built',
+    img: localImg('bp-02-villa-1.jpg'),
+    sheet: 'BP-02',
+  },
+  {
+    title: 'Cultural Community Club',
+    href: '/projects?tab=academic',
+    img: localImg('ap-02-cultural.jpg'),
+    sheet: 'AP-02',
+  },
 ]
 
 export default function FeaturedWork() {
   return (
-    <section className="max-w-site mx-auto px-6 py-16">
-      <SectionLabel label="Featured Work" count="5 Selected" />
+    <section className="py-16">
+      <div className="max-w-site mx-auto px-6 mb-6">
+        <SectionLabel label="Featured Work" count="7 Selected" />
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-0 w-full">
         {FEATURED.map((item, i) => (
-          <RevealText key={item.title} delay={i * 0.1}>
+          <RevealText key={item.title} delay={i * 0.05}>
             <Link href={item.href} className="block reveal-item group cursor-pointer">
               <div className="relative aspect-[4/5] overflow-hidden bg-paper-dim">
                 {item.img && (
@@ -67,12 +81,12 @@ export default function FeaturedWork() {
                 <span className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 bg-accent-red transition-transform duration-[400ms] ease-out group-hover:scale-x-100" />
               </div>
 
-              <div className="flex items-center justify-between mt-3">
-                <p className="font-mono text-xs uppercase tracking-widest transition-transform duration-300 ease-out group-hover:-translate-y-1">
+              <div className="flex items-center justify-between px-3 py-2">
+                <p className="font-mono text-xs uppercase tracking-widest transition-transform duration-300 ease-out group-hover:-translate-y-1 truncate">
                   {item.title}
                 </p>
                 {item.sheet && (
-                  <span className="font-mono text-xs text-ink-faint transition-colors duration-200 group-hover:text-accent-red">
+                  <span className="font-mono text-xs text-ink-faint transition-colors duration-200 group-hover:text-accent-red flex-shrink-0 ml-2">
                     {item.sheet}
                   </span>
                 )}
