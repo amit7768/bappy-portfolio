@@ -37,7 +37,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-site mx-auto flex items-center justify-between px-6 h-16">
-        <Link href="/" className="font-mono font-medium text-sm tracking-wide">
+        <Link href="/" className="font-mono font-semibold text-sm sm:text-base tracking-wide">
           <span className="name-gradient hidden sm:inline">Md. Mahmudul Hasan Bappy</span>
           <span className="name-gradient sm:hidden">M. H. Bappy</span>
         </Link>
