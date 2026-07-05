@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import { driveImg } from '@/lib/drive'
+import { localImg } from '@/lib/drive'
 
 const IMAGES = [
-  driveImg('1BPm_jx9ZMMfrFi76KPBpu4Oy9ZCrqWRi', 'w1200'),
-  'https://drive.google.com/thumbnail?id=12rkCQ6YpY5H6IVHBzylomz-SbWsYJfDy&sz=w1200',
-  driveImg('1ScYhBZHz6D1te-tPzuHo9eRLBCf9TKRw', 'w1200'),
+  localImg('strip-1.jpg'),
+  localImg('strip-2.jpg'),
+  localImg('strip-3.jpg'),
 ]
 
 export default function ImageStrip() {

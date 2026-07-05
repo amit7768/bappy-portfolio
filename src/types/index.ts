@@ -10,7 +10,7 @@ export interface AcademicProject {
 }
 
 export interface BuiltProjectImage {
-  id: string
+  src: string
   cap: string
 }
 
@@ -26,7 +26,7 @@ export interface BuiltProject {
 }
 
 export interface ArchvizRender {
-  id: string
+  src: string
   cap: string
 }
 

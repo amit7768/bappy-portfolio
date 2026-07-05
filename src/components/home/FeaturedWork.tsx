@@ -1,11 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ACADEMIC_PROJECTS } from '@/data/academic'
-import { driveImg } from '@/lib/drive'
+import { localImg } from '@/lib/drive'
 import SectionLabel from '@/components/ui/SectionLabel'
 import RevealText from '@/components/ui/RevealText'
-
-const andoMuseum = ACADEMIC_PROJECTS.find((p) => p.sheet === 'AP-03')
 
 interface FeaturedItem {
   title: string
@@ -18,8 +15,8 @@ const FEATURED: FeaturedItem[] = [
   {
     title: 'Ando Museum',
     href: '/projects?tab=academic',
-    img: andoMuseum?.behanceImg ?? '',
-    sheet: andoMuseum?.sheet,
+    img: localImg('featured-ando.jpg'),
+    sheet: 'AP-03',
   },
   {
     title: 'Monument of Resistance',
@@ -29,7 +26,7 @@ const FEATURED: FeaturedItem[] = [
   {
     title: 'Archviz — Visualization Work',
     href: '/projects?tab=archviz',
-    img: driveImg('1CvTgpIA9FiIvY8MNbFtbitIn64cZFjxt', 'w800'),
+    img: localImg('av-01.jpg'),
   },
 ]
 

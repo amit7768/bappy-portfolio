@@ -2,7 +2,6 @@
 
 import { useRef, useState } from 'react'
 import Image from 'next/image'
-import { driveImg } from '@/lib/drive'
 import ImageLightbox from '@/components/ui/ImageLightbox'
 import type { BuiltProjectImage } from '@/types'
 
@@ -39,14 +38,14 @@ export default function BuiltCarousel({ images, projectTitle }: BuiltCarouselPro
       >
         {images.map((img, i) => (
           <button
-            key={img.id}
+            key={img.src}
             type="button"
             onClick={() => setLightboxOpen(true)}
             className="absolute inset-0 transition-opacity duration-500"
             style={{ opacity: i === active ? 1 : 0, pointerEvents: i === active ? 'auto' : 'none' }}
             aria-label={`Open ${img.cap}`}
           >
-            <Image src={driveImg(img.id, 'w800')} alt={img.cap} fill unoptimized className="object-cover" />
+            <Image src={img.src} alt={img.cap} fill unoptimized className="object-cover" />
           </button>
         ))}
 
@@ -75,7 +74,7 @@ export default function BuiltCarousel({ images, projectTitle }: BuiltCarouselPro
       <div className="flex gap-2 justify-center mt-3">
         {images.map((img, i) => (
           <button
-            key={img.id}
+            key={img.src}
             type="button"
             aria-label={`Go to image ${i + 1}`}
             onClick={() => setActive(i)}
@@ -90,7 +89,7 @@ export default function BuiltCarousel({ images, projectTitle }: BuiltCarouselPro
 
       {lightboxOpen && (
         <ImageLightbox
-          src={driveImg(current.id, 'w1200')}
+          src={current.src}
           caption={`${projectTitle} — ${current.cap}`}
           onClose={() => setLightboxOpen(false)}
           onPrev={prev}

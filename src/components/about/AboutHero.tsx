@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { driveImg } from '@/lib/drive'
 import RevealText from '@/components/ui/RevealText'
 
 export default function AboutHero() {
@@ -8,7 +7,7 @@ export default function AboutHero() {
       <RevealText direction="left">
         <div className="relative aspect-[3/4] bg-paper-dim dark:bg-paper-dim-dark overflow-hidden">
           <Image
-            src={driveImg('1cwJzj50EXDUMzWXcBeec6_VtrK4Ma75N', 'w800')}
+            src="/assets/projects/about-photo.jpg"
             alt="Md. Mahmudul Hasan Bappy"
             fill
             unoptimized

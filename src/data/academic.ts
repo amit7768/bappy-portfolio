@@ -1,5 +1,5 @@
 import type { AcademicProject } from '@/types'
-import { driveImg } from '@/lib/drive'
+import { localImg } from '@/lib/drive'
 
 export const ACADEMIC_PROJECTS: AcademicProject[] = [
   {
@@ -8,7 +8,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     tags: ['Conceptual', 'Speculative', 'Habitat Design'],
     location: 'KUET Studio · Mars Surface (Speculative)',
     desc: 'A conceptual habitat designed for future living on Mars — integrating radiation protection, airtight insulation, renewable energy, and modular living systems. The design combines functionality, adaptability, and human comfort to support long-term habitation and scientific exploration on the Martian surface. Emphasizes safety, flexibility, and psychological well-being through adaptable interiors and natural lighting simulations.',
-    img: driveImg('1wRJwhSULC6GZUDEP7zgldyNPaTRzkz8k', 'w1200'),
+    img: localImg('ap-01-mars.jpg'),
     behanceImg: null,
   },
   {
@@ -17,7 +17,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     tags: ['Community', 'Cultural', 'Climate-Responsive'],
     location: 'KUET Studio · BIDC Road, Peoples Quarter, Khulna',
     desc: 'A community cultural club designed for the local climate, social interaction, and contextual surroundings of Khulna. Pockets, pathways, and semi-open spaces were integrated within the building form to enhance ventilation, daylight penetration, and spatial connectivity. Creates a calm and welcoming environment for cultural and community activities through proper airflow, natural lighting, and open circulation.',
-    img: driveImg('14JaxSZ74DdDwP1gI5js8JfQJB8YJVB83', 'w1200'),
+    img: localImg('ap-02-cultural.jpg'),
     behanceImg: 'https://mir-s3-cdn-cf.behance.net/projects/404/7a6340225671451.Y3JvcCw2Mjg4LDQ5MTksMTM4NSwxMDI3.jpg',
   },
   {
@@ -26,7 +26,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     tags: ['Cultural', 'Museum', 'Tadao Ando Study'],
     location: 'KUET Studio · Khulna',
     desc: "A design studio exercise reinterpreting Tadao Ando's architectural philosophy — material honesty, choreographed light, and geometric silence — into a public art museum. Developed through massing studies, section analysis, master plan at 1:150, and first floor plan at 1:150. A symphony of design echoing an architect's philosophical tapestry.",
-    img: driveImg('1qOV1F8XCf13Gk2k2gX52KsfjmuAcGMMf', 'w1200'),
+    img: localImg('ap-03-ando.jpg'),
     behanceImg: 'https://mir-s3-cdn-cf.behance.net/projects/404/9efe34225672411.Y3JvcCw0NDg0LDM1MDcsMjMzLDA.jpg',
   },
   {
@@ -35,7 +35,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     tags: ['Commercial', 'Public Utility', 'Highway Infrastructure'],
     location: 'KUET Studio · Dhaka–Gopalganj Highway, Gopalganj',
     desc: 'A multifunctional highway rest stop combining the fluid inspiration of the traditional Shampan boat with the functional requirements of a fuel station and restaurant. Distinct service areas and climate-responsive planning create an efficient and visually dynamic public space. Separates fueling, dining, and resting zones to maintain safety while enhancing accessibility and comfort for travelers.',
-    img: driveImg('18c3hbkikFPeWRyRgCgCoy8NEYWKeU-ka', 'w1200'),
+    img: localImg('ap-04-highway.jpg'),
     behanceImg: 'https://mir-s3-cdn-cf.behance.net/projects/404/fccd09202330145.Y3JvcCw4MDgsNjMyLDAsMA.jpg',
   },
   {
@@ -44,7 +44,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     tags: ['High-Rise', 'Mixed-Use', 'Urban Infrastructure'],
     location: 'KUET Studio · Khulna City',
     desc: 'A mixed-use high-rise development creating a dynamic urban hub that combines commerce, hospitality, and public interaction within a single architectural form. A prominent cantilever bridge acts as both a structural and visual landmark, symbolizing movement, innovation, and urban identity. Mega columns, column bracing systems, and interconnected public spaces respond to the demands of high-rise architecture.',
-    img: driveImg('18KLp4UtTdmGex4MWKIout9ixumxDXn38', 'w1200'),
+    img: localImg('ap-05-nexus.jpg'),
     behanceImg: 'https://mir-s3-cdn-cf.behance.net/projects/404/a0587b225669297.Y3JvcCw0MTE0LDMyMTgsMzM2LDA.jpg',
   },
   {
@@ -53,7 +53,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     tags: ['Urban', 'Public Space', 'Walkability'],
     location: 'KUET Studio · Khulna City',
     desc: 'A redesign of an existing pedestrian space within the urban context of Khulna City. Improves pedestrian experience by creating a balanced combination of direct pathways, resting spaces, and interactive public areas. Emphasizes accessibility, comfort, circulation, and user engagement through organized movement patterns, shaded seating zones, and people-friendly spatial planning.',
-    img: driveImg('1d0CNFXcF7swAh7acvI5oLIBf0A6jFRkM', 'w1200'),
+    img: localImg('ap-06-pedestrian.jpg'),
     behanceImg: null,
   },
   {
@@ -62,7 +62,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     tags: ['Urban', 'Market', 'Vernacular Architecture'],
     location: 'KUET Studio · Khulna City',
     desc: 'A transformation of a traditional urban market into a more inclusive, sustainable, and community-oriented public space. Integrates vernacular architectural elements, local materials, shaded walkways, and naturally ventilated spaces. Introduces women-friendly workspaces and recycling initiatives alongside improved circulation, using thatch roofing systems inspired by local building culture.',
-    img: driveImg('1s7CgSx4aeMkIDbYvlFjfTz9Su2wHfjH9', 'w1200'),
+    img: localImg('ap-07-urban.jpg'),
     behanceImg: null,
   },
   {
@@ -71,7 +71,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     tags: ['Housing', 'Social Architecture', 'Affordable Design'],
     location: 'KUET Studio · Khulna City',
     desc: "An affordable housing complex for low and middle-income communities inspired by Charles Correa's Belapur Housing approach. Follows a low-rise, high-density concept through 2–3 storied residential clusters that encourage community interaction and efficient land use. Emphasizes affordability, natural ventilation, shared open spaces, and climate-responsive planning.",
-    img: driveImg('1ewH0axCEUyJqR5darYdydJgUVqgEtqpw', 'w1200'),
+    img: localImg('ap-08-housing.jpg'),
     behanceImg: null,
   },
   {
@@ -80,7 +80,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     tags: ['Landscape', 'Commercial', 'Organic Form'],
     location: 'KUET Studio · Khulna City',
     desc: 'A landscape redesign of a commercial front yard space using organic forms and natural spatial arrangements. Curved pathways, green elements, seating spaces inspired by leaf forms, and soft landscape features enhance user experience, relaxation, and the visual identity of the space. Emphasizes aesthetics, comfort, and spatial harmony between the built structure and the outdoor environment.',
-    img: driveImg('1LUTxnhvjVE-P8uLZICf4X9DB-MPZka5_', 'w1200'),
+    img: localImg('ap-09-landscape.jpg'),
     behanceImg: null,
   },
   {
@@ -89,7 +89,7 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     tags: ['Interior', 'Retail', 'Brand Identity'],
     location: 'KUET Studio · Khulna City',
     desc: "Interior design for the clothing brand Deshal, inspired by local materials, cultural identity, and the brand's distinctive character. Emphasizes natural textures, earthy materials, and handcrafted elements to create a warm and authentic retail environment. Balances aesthetics, functionality, and circulation through carefully planned layouts, product display systems, and comfortable interactive spaces.",
-    img: driveImg('1Uy6FP_EeX4-O4EgjCvlfhq4NmhzuvIrR', 'w1200'),
+    img: localImg('ap-10-interior.jpg'),
     behanceImg: null,
   },
 ]

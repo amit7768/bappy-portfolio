@@ -9,3 +9,8 @@ export function driveImg(fileId: string, size: DriveImageSize = 'w800'): string 
 export function driveVideo(fileId: string): string {
   return `https://drive.google.com/file/d/${fileId}/preview`
 }
+
+/** Local static image path — served from public/assets/projects/. */
+export function localImg(filename: string): string {
+  return `/assets/projects/${filename}`
+}

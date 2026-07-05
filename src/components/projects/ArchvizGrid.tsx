@@ -5,7 +5,7 @@ import Image from 'next/image'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ARCHVIZ_RENDERS, ARCHVIZ_VIDEOS } from '@/data/archviz'
-import { driveImg, driveVideo } from '@/lib/drive'
+import { driveVideo } from '@/lib/drive'
 import SectionLabel from '@/components/ui/SectionLabel'
 import ImageLightbox from '@/components/ui/ImageLightbox'
 import VideoLightbox from '@/components/ui/VideoLightbox'
@@ -16,7 +16,7 @@ const INITIAL_SHOW = 16
 type Filter = 'all' | 'renders' | 'walkthrough'
 
 type GridItem =
-  | { type: 'render'; id: string; cap: string }
+  | { type: 'render'; src: string; cap: string }
   | { type: 'video'; id: string; cap: string; thumb: string }
 
 export default function ArchvizGrid() {
@@ -103,16 +103,16 @@ export default function ArchvizGrid() {
           const itemClass = `${isNew ? 'archviz-new-item' : 'archviz-item'} mb-1 break-inside-avoid`
 
           return (
-            <div key={`${item.type}-${item.id}-${idx}`} className={itemClass}>
+            <div key={`${item.type}-${idx}`} className={itemClass}>
               {item.type === 'render' ? (
                 <button
                   type="button"
-                  onClick={() => setActiveImage(item.id)}
+                  onClick={() => setActiveImage(item.src)}
                   className="group relative block w-full"
                   data-cursor-view
                 >
                   <Image
-                    src={driveImg(item.id, 'w400')}
+                    src={item.src}
                     alt={item.cap}
                     width={400}
                     height={500}
@@ -173,7 +173,7 @@ export default function ArchvizGrid() {
 
       {activeImage && (
         <ImageLightbox
-          src={driveImg(activeImage, 'w1200')}
+          src={activeImage}
           onClose={() => setActiveImage(null)}
         />
       )}

@@ -10,12 +10,12 @@ out/
 .env.local
 .env*.local
 
-# videos (too large for git — keep local only)
-public/videos/
 
 # OS
 .DS_Store
 Thumbs.db
 
 # Vercel
+.vercel
+
 .vercel
