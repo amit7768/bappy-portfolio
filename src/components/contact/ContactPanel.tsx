@@ -79,9 +79,9 @@ export default function ContactPanel() {
 
       <section ref={sectionRef} className="max-w-site mx-auto px-6 py-24">
         {/* Availability badge */}
-        <div className="inline-flex items-center gap-2 border border-rule dark:border-rule-dark px-3 py-1.5 mb-8">
+        <div className="inline-flex items-center gap-2 border border-rule px-3 py-1.5 mb-8">
           <span className="avail-dot block w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0" />
-          <span className="font-mono text-xs text-ink-soft dark:text-ink-soft-dark">
+          <span className="font-mono text-xs text-ink-soft">
             Available for new projects
           </span>
         </div>
@@ -99,7 +99,7 @@ export default function ContactPanel() {
           </span>
         </h1>
 
-        <p className="text-sm text-ink-soft dark:text-ink-soft-dark mt-4 max-w-xl">
+        <p className="text-sm text-ink-soft mt-4 max-w-xl">
           Available for freelance visualization, remote work, and internships — from Dhaka to
           anywhere.
         </p>
@@ -109,7 +109,7 @@ export default function ContactPanel() {
           <div className="flex flex-col gap-6">
             {/* Email with copy tooltip */}
             <div>
-              <span className="font-mono text-xs uppercase tracking-widest text-ink-faint dark:text-ink-faint-dark block mb-1">
+              <span className="font-mono text-xs uppercase tracking-widest text-ink-faint block mb-1">
                 Email
               </span>
               <div className="relative inline-block">
@@ -121,7 +121,7 @@ export default function ContactPanel() {
                   {CONTACT.email}
                 </button>
                 {copied && (
-                  <span className="absolute -top-8 left-1/2 -translate-x-1/2 font-mono text-xs bg-ink text-paper dark:bg-ink-dark dark:text-paper-dark px-2 py-1 whitespace-nowrap pointer-events-none z-10">
+                  <span className="absolute -top-8 left-1/2 -translate-x-1/2 font-mono text-xs bg-ink text-paper px-2 py-1 whitespace-nowrap pointer-events-none z-10">
                     Copied!
                   </span>
                 )}
@@ -129,14 +129,14 @@ export default function ContactPanel() {
             </div>
 
             <div>
-              <span className="font-mono text-xs uppercase tracking-widest text-ink-faint dark:text-ink-faint-dark block mb-1">
+              <span className="font-mono text-xs uppercase tracking-widest text-ink-faint block mb-1">
                 Phone
               </span>
               <span className="font-serif text-xl">{CONTACT.phone}</span>
             </div>
 
             <div>
-              <span className="font-mono text-xs uppercase tracking-widest text-ink-faint dark:text-ink-faint-dark block mb-1">
+              <span className="font-mono text-xs uppercase tracking-widest text-ink-faint block mb-1">
                 Location
               </span>
               <span className="font-serif text-xl inline-flex items-start gap-1.5">
@@ -147,7 +147,7 @@ export default function ContactPanel() {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.5"
-                  className="text-ink-faint dark:text-ink-faint-dark flex-shrink-0 mt-[6px]"
+                  className="text-ink-faint flex-shrink-0 mt-[6px]"
                 >
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
                   <circle cx="12" cy="9" r="2.5" />
@@ -168,10 +168,10 @@ export default function ContactPanel() {
                 className="social-link group relative inline-flex items-center gap-2 font-mono text-sm pl-3 py-1 w-fit"
               >
                 <span className="absolute left-0 top-0 bottom-0 w-0.5 bg-accent-red origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-200" />
-                <span className="text-ink-soft dark:text-ink-soft-dark group-hover:text-ink dark:group-hover:text-ink-dark transition-colors duration-200">
+                <span className="text-ink-soft group-hover:text-ink:text-ink-dark transition-colors duration-200">
                   {social.label}
                 </span>
-                <span className="inline-block text-ink-faint dark:text-ink-faint-dark transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                <span className="inline-block text-ink-faint transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   ↗
                 </span>
               </a>
@@ -179,7 +179,7 @@ export default function ContactPanel() {
           </div>
         </div>
 
-        <p className="font-mono text-xs text-ink-faint dark:text-ink-faint-dark mt-20 border-t border-rule dark:border-rule-dark pt-6">
+        <p className="font-mono text-xs text-ink-faint mt-20 border-t border-rule pt-6">
           Response within 24 hours · Based in Dhaka, Bangladesh · UTC+6
         </p>
       </section>

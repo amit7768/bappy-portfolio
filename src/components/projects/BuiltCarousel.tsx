@@ -32,7 +32,7 @@ export default function BuiltCarousel({ images, projectTitle }: BuiltCarouselPro
   return (
     <div>
       <div
-        className="relative aspect-[4/3] overflow-hidden bg-paper-dim dark:bg-paper-dim-dark"
+        className="relative aspect-[4/3] overflow-hidden bg-paper-dim"
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
@@ -53,7 +53,7 @@ export default function BuiltCarousel({ images, projectTitle }: BuiltCarouselPro
           type="button"
           aria-label="Previous image"
           onClick={prev}
-          className="absolute left-3 top-1/2 -translate-y-1/2 bg-paper/80 dark:bg-paper-dark/80 p-2"
+          className="absolute left-3 top-1/2 -translate-y-1/2 bg-paper/80 p-2"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M15 18l-6-6 6-6" />
@@ -63,7 +63,7 @@ export default function BuiltCarousel({ images, projectTitle }: BuiltCarouselPro
           type="button"
           aria-label="Next image"
           onClick={next}
-          className="absolute right-3 top-1/2 -translate-y-1/2 bg-paper/80 dark:bg-paper-dark/80 p-2"
+          className="absolute right-3 top-1/2 -translate-y-1/2 bg-paper/80 p-2"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M9 18l6-6-6-6" />
@@ -78,12 +78,12 @@ export default function BuiltCarousel({ images, projectTitle }: BuiltCarouselPro
             type="button"
             aria-label={`Go to image ${i + 1}`}
             onClick={() => setActive(i)}
-            className={`h-1.5 w-1.5 rounded-full ${i === active ? 'bg-accent-red' : 'bg-ink-faint dark:bg-ink-faint-dark'}`}
+            className={`h-1.5 w-1.5 rounded-full ${i === active ? 'bg-accent-red' : 'bg-ink-faint'}`}
           />
         ))}
       </div>
 
-      <p className="font-mono text-xs text-center text-ink-faint dark:text-ink-faint-dark mt-2">
+      <p className="font-mono text-xs text-center text-ink-faint mt-2">
         {current.cap}
       </p>
 

@@ -88,8 +88,8 @@ export default function ArchvizGrid() {
             onClick={() => setFilter(f)}
             className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border ${
               filter === f
-                ? 'bg-ink text-paper dark:bg-ink-dark dark:text-paper-dark border-ink dark:border-ink-dark'
-                : 'border-rule dark:border-rule-dark text-ink-soft dark:text-ink-soft-dark'
+                ? 'bg-ink text-paper border-ink'
+                : 'border-rule text-ink-soft'
             }`}
           >
             {f}
@@ -156,7 +156,7 @@ export default function ArchvizGrid() {
           <button
             type="button"
             onClick={handleLoadMore}
-            className="font-mono text-xs uppercase tracking-widest px-6 py-3 border border-rule dark:border-rule-dark text-ink-soft dark:text-ink-soft-dark hover:border-ink dark:hover:border-ink-dark hover:text-ink dark:hover:text-ink-dark transition-colors duration-200"
+            className="font-mono text-xs uppercase tracking-widest px-6 py-3 border border-rule text-ink-soft hover:border-ink:border-ink-dark hover:text-ink:text-ink-dark transition-colors duration-200"
           >
             Load More ({items.length - INITIAL_SHOW} remaining)
           </button>

@@ -55,7 +55,7 @@ function StatCounter({ stat }: { stat: Stat }) {
           {stat.suffix}
         </span>
       </div>
-      <div className="font-mono text-xs uppercase tracking-widest text-ink-faint dark:text-ink-faint-dark mt-2">
+      <div className="font-mono text-xs uppercase tracking-widest text-ink-faint mt-2">
         {stat.label[0]}
         <br />
         {stat.label[1]}
@@ -66,7 +66,7 @@ function StatCounter({ stat }: { stat: Stat }) {
 
 export default function StatsStrip() {
   return (
-    <div className="flex flex-wrap border-t border-b border-rule dark:border-rule-dark max-w-site mx-auto px-6">
+    <div className="flex flex-wrap border-t border-b border-rule max-w-site mx-auto px-6">
       {STATS.map((stat) => (
         <StatCounter key={stat.label.join('-')} stat={stat} />
       ))}

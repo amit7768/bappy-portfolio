@@ -39,7 +39,7 @@ export default function DriveImage(props: DriveImageProps) {
     return (
       <div
         className={cn(
-          'flex items-center justify-center bg-paper-dim dark:bg-paper-dim-dark',
+          'flex items-center justify-center bg-paper-dim',
           className
         )}
         data-cursor-view
@@ -59,7 +59,7 @@ export default function DriveImage(props: DriveImageProps) {
 
   return (
     <div className={cn('relative overflow-hidden', className)} data-cursor-view>
-      {!loaded && <div className="absolute inset-0 bg-paper-dim dark:bg-paper-dim-dark animate-pulse" />}
+      {!loaded && <div className="absolute inset-0 bg-paper-dim animate-pulse" />}
       <Image
         src={src}
         alt={alt}

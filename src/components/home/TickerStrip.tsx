@@ -3,12 +3,12 @@ const TICKER_TEXT =
 
 export default function TickerStrip() {
   return (
-    <div className="group h-11 flex items-center overflow-hidden bg-ink dark:bg-ink-dark">
+    <div className="group h-11 flex items-center overflow-hidden bg-ink">
       <div className="flex whitespace-nowrap animate-marquee group-hover:[animation-play-state:paused]">
-        <span className="font-mono text-xs tracking-widest uppercase text-paper/60 dark:text-paper-dark/60 px-2">
+        <span className="font-mono text-xs tracking-widest uppercase text-paper/60 px-2">
           {TICKER_TEXT}
         </span>
-        <span className="font-mono text-xs tracking-widest uppercase text-paper/60 dark:text-paper-dark/60 px-2">
+        <span className="font-mono text-xs tracking-widest uppercase text-paper/60 px-2">
           {TICKER_TEXT}
         </span>
       </div>

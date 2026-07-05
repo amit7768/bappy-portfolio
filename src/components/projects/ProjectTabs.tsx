@@ -48,8 +48,8 @@ export default function ProjectTabs() {
             onClick={() => setTab(t.key)}
             className={`font-mono text-xs uppercase tracking-widest px-4 py-2 transition-colors ${
               tab === t.key
-                ? 'bg-ink text-paper dark:bg-ink-dark dark:text-paper-dark'
-                : 'text-ink-soft dark:text-ink-soft-dark hover:border hover:border-ink dark:hover:border-ink-dark'
+                ? 'bg-ink text-paper'
+                : 'text-ink-soft hover:border hover:border-ink:border-ink-dark'
             }`}
           >
             {t.label}

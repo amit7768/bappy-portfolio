@@ -12,7 +12,7 @@ export default function AwardsSection() {
       <div className="flex flex-col">
         {AWARDS.map((award) => (
           <RevealText key={award.sheet}>
-            <div className="grid md:grid-cols-[80px_1fr_160px] gap-6 items-start border-b border-rule dark:border-rule-dark py-8">
+            <div className="grid md:grid-cols-[80px_1fr_160px] gap-6 items-start border-b border-rule py-8">
               <SheetRef sheet={award.sheet} />
 
               <div>
@@ -22,15 +22,15 @@ export default function AwardsSection() {
                   </span>
                 )}
                 <h3 className="font-serif text-xl">{award.title}</h3>
-                <p className="text-sm text-ink-soft dark:text-ink-soft-dark mt-2 max-w-2xl">
+                <p className="text-sm text-ink-soft mt-2 max-w-2xl">
                   {award.note}
                 </p>
-                <p className="font-mono text-xs text-ink-faint dark:text-ink-faint-dark mt-2">
+                <p className="font-mono text-xs text-ink-faint mt-2">
                   {award.year}
                 </p>
               </div>
 
-              <div className="relative w-full aspect-[4/3] overflow-hidden bg-paper-dim dark:bg-paper-dim-dark">
+              <div className="relative w-full aspect-[4/3] overflow-hidden bg-paper-dim">
                 {award.img && (
                   <Image src={award.img} alt={award.title} fill className="object-cover" />
                 )}

@@ -90,17 +90,17 @@ export default function SkillDots() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mt-6">
         {SKILLS.map((skill) => (
           <div key={skill.name} className="group flex items-center gap-4">
-            <span className="font-sans font-medium text-sm text-ink dark:text-ink-dark min-w-[100px] transition-colors duration-300 group-hover:text-accent-red">
+            <span className="font-sans font-medium text-sm text-ink min-w-[100px] transition-colors duration-300 group-hover:text-accent-red">
               {skill.name}
             </span>
-            <div className="relative flex-1 h-px bg-rule dark:bg-rule-dark">
+            <div className="relative flex-1 h-px bg-rule">
               <div
-                className="skill-bar-fill absolute top-[-1px] left-0 h-[3px] bg-ink dark:bg-ink-dark transition-colors duration-300 group-hover:bg-accent-red"
+                className="skill-bar-fill absolute top-[-1px] left-0 h-[3px] bg-ink transition-colors duration-300 group-hover:bg-accent-red"
                 data-pct={skill.pct}
                 style={{ width: '0%' }}
               />
             </div>
-            <span className="skill-pct-label font-mono text-xs text-ink-faint dark:text-ink-faint-dark min-w-[36px] text-right opacity-0">
+            <span className="skill-pct-label font-mono text-xs text-ink-faint min-w-[36px] text-right opacity-0">
               0%
             </span>
           </div>

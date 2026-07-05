@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { DM_Serif_Display, DM_Sans, IBM_Plex_Mono } from 'next/font/google'
-import { ThemeProvider } from 'next-themes'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import CustomCursor from '@/components/layout/CustomCursor'
@@ -53,7 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      suppressHydrationWarning
       className={`${dmSerif.variable} ${dmSans.variable} ${ibmMono.variable}`}
     >
       <head>
@@ -72,14 +70,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-          <div id="scroll-progress" />
-          <ScrollProgress />
-          <CustomCursor />
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </ThemeProvider>
+        <div id="scroll-progress" />
+        <ScrollProgress />
+        <CustomCursor />
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )

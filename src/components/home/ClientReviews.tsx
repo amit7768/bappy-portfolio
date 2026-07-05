@@ -55,17 +55,6 @@ const REVIEWS: ClientReview[] = [
     duration: '3 days',
     verified: true,
   },
-  {
-    id: 5,
-    name: 'anproctor',
-    country: 'United States',
-    countryCode: 'US',
-    rating: 4.7,
-    text: 'Great guy to work with and did a good job. Very efficient and polite — delivered clean results within the timeline.',
-    service: 'Architectural Graphics',
-    duration: '5 days',
-    verified: true,
-  },
 ]
 
 
@@ -95,7 +84,7 @@ function StarRating({ rating }: { rating: number }) {
           </svg>
         )
       })}
-      <span className="font-mono text-xs text-ink-faint dark:text-ink-faint-dark ml-1">
+      <span className="font-mono text-xs text-ink-faint ml-1">
         {rating.toFixed(1)}
       </span>
     </div>
@@ -105,28 +94,28 @@ function StarRating({ rating }: { rating: number }) {
 function ReviewCard({ review }: { review: ClientReview }) {
   const initial = review.name[0].toUpperCase()
   return (
-    <div className="w-80 flex-shrink-0 mr-4 p-6 bg-paper-card dark:bg-paper-card-dark border border-rule dark:border-rule-dark shadow-sm">
+    <div className="w-80 flex-shrink-0 mr-4 p-6 bg-paper-card border border-rule shadow-sm">
       <StarRating rating={review.rating} />
 
       <div className="mt-3">
         <div className="font-serif text-4xl text-accent-red/20 leading-none mb-1 select-none">
           &ldquo;
         </div>
-        <p className="text-sm leading-relaxed text-ink dark:text-ink-dark line-clamp-4">
+        <p className="text-sm leading-relaxed text-ink line-clamp-4">
           {review.text}
         </p>
       </div>
 
-      <div className="border-t border-rule dark:border-rule-dark mt-4 pt-4">
+      <div className="border-t border-rule mt-4 pt-4">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-full bg-ink dark:bg-ink-dark flex items-center justify-center flex-shrink-0">
-            <span className="font-mono text-sm text-paper dark:text-paper-dark leading-none">
+          <div className="w-8 h-8 rounded-full bg-ink flex items-center justify-center flex-shrink-0">
+            <span className="font-mono text-sm text-paper leading-none">
               {initial}
             </span>
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="font-sans text-sm font-medium text-ink dark:text-ink-dark truncate">
+              <span className="font-sans text-sm font-medium text-ink truncate">
                 {review.name}
               </span>
               {review.repeatClient && (
@@ -135,7 +124,7 @@ function ReviewCard({ review }: { review: ClientReview }) {
                 </span>
               )}
             </div>
-            <span className="font-mono text-xs text-ink-faint dark:text-ink-faint-dark">
+            <span className="font-mono text-xs text-ink-faint">
               {flagEmoji(review.countryCode)} {review.country}
             </span>
           </div>
@@ -143,8 +132,8 @@ function ReviewCard({ review }: { review: ClientReview }) {
       </div>
 
       <div className="mt-3">
-        <span className="font-mono text-[10px] text-ink-faint dark:text-ink-faint-dark uppercase tracking-wider">
-          via Fiverr · {review.service}
+        <span className="font-mono text-[10px] text-ink-faint uppercase tracking-wider">
+          {review.service}
         </span>
       </div>
     </div>
@@ -198,13 +187,13 @@ export default function ClientReviews() {
   )
 
   return (
-    <section ref={sectionRef} className="bg-paper-dim dark:bg-paper-dim-dark py-20">
+    <section ref={sectionRef} className="bg-paper-dim py-20">
       {/* Header */}
       <div ref={headerRef} className="max-w-site mx-auto px-6 mb-12">
-        <SectionLabel label="Client Reviews" count="Fiverr · 22 Reviews" />
+        <SectionLabel label="Client Reviews" count="4 Reviews" />
 
         <div className="flex items-center gap-4 mt-6 flex-wrap">
-          <span className="font-serif text-5xl text-ink dark:text-ink-dark leading-none">4.6</span>
+          <span className="font-serif text-5xl text-ink leading-none">4.6</span>
           <div className="flex items-center gap-0.5">
             {Array.from({ length: 5 }).map((_, i) => (
               <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#B91C1C">
@@ -212,16 +201,8 @@ export default function ClientReviews() {
               </svg>
             ))}
           </div>
-          <span className="font-sans text-sm text-ink-soft dark:text-ink-soft-dark">
-            out of 22 client reviews on{' '}
-            <a
-              href="https://www.fiverr.com/mahmudul_bappy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-ink dark:text-ink-dark hover:text-accent-red transition-colors duration-200 font-medium"
-            >
-              Fiverr
-            </a>
+          <span className="font-sans text-sm text-ink-soft">
+            from verified clients
           </span>
         </div>
       </div>
@@ -240,20 +221,6 @@ export default function ClientReviews() {
         </div>
       </div>
 
-      {/* Footer CTA */}
-      <div className="max-w-site mx-auto px-6 mt-12 flex flex-col items-center gap-2">
-        <span className="font-mono text-xs text-ink-faint dark:text-ink-faint-dark">
-          22 verified client reviews on Fiverr
-        </span>
-        <a
-          href="https://www.fiverr.com/mahmudul_bappy"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-sans text-sm text-ink-soft dark:text-ink-soft-dark hover:text-accent-red transition-colors duration-200"
-        >
-          View full profile ↗
-        </a>
-      </div>
     </section>
   )
 }

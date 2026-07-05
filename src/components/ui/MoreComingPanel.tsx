@@ -46,7 +46,7 @@ export default function MoreComingPanel({
   return (
     <div
       ref={panelRef}
-      className="w-full border-t border-rule dark:border-rule-dark py-16 px-8 flex flex-col items-center"
+      className="w-full border-t border-rule py-16 px-8 flex flex-col items-center"
     >
       <style>{`
         @keyframes mcp-dot-pulse {
@@ -78,20 +78,20 @@ export default function MoreComingPanel({
 
       <h2 className="font-serif text-2xl md:text-3xl mt-3 text-center">{heading}</h2>
 
-      <p className="font-sans text-sm text-ink-soft dark:text-ink-soft-dark mt-3 text-center max-w-md">
+      <p className="font-sans text-sm text-ink-soft mt-3 text-center max-w-md">
         {sub}
       </p>
 
       <div className="flex gap-2 mt-6 items-center">
-        <span className="mcp-pulse-dot w-1.5 h-1.5 rounded-full bg-ink-faint dark:bg-ink-faint-dark" />
-        <span className="mcp-pulse-dot w-1.5 h-1.5 rounded-full bg-ink-faint dark:bg-ink-faint-dark" />
-        <span className="mcp-pulse-dot w-1.5 h-1.5 rounded-full bg-ink-faint dark:bg-ink-faint-dark" />
+        <span className="mcp-pulse-dot w-1.5 h-1.5 rounded-full bg-ink-faint" />
+        <span className="mcp-pulse-dot w-1.5 h-1.5 rounded-full bg-ink-faint" />
+        <span className="mcp-pulse-dot w-1.5 h-1.5 rounded-full bg-ink-faint" />
       </div>
 
       <Link
         href={ctaHref}
         {...(ctaExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-        className="mcp-cta-link mt-8 font-mono text-sm text-ink-soft dark:text-ink-soft-dark hover:text-accent-red transition-colors duration-200"
+        className="mcp-cta-link mt-8 font-mono text-sm text-ink-soft hover:text-accent-red transition-colors duration-200"
       >
         {ctaText}
       </Link>

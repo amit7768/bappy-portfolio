@@ -105,7 +105,7 @@ export default function AcademicList() {
           return (
             <div
               key={project.sheet}
-              className="academic-row group relative grid md:grid-cols-[80px_1fr_240px] gap-6 items-start border-b border-rule dark:border-rule-dark py-8 transition-colors duration-300 hover:bg-paper-dim dark:hover:bg-paper-dim-dark"
+              className="academic-row group relative grid md:grid-cols-[80px_1fr_240px] gap-6 items-start border-b border-rule py-8 transition-colors duration-300 hover:bg-paper-dim:bg-paper-dim-dark"
             >
               {/* Red left border scaleY on hover */}
               <span className="absolute left-0 top-0 bottom-0 w-0.5 bg-accent-red origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-300" />
@@ -120,21 +120,21 @@ export default function AcademicList() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="font-mono text-[10px] uppercase tracking-widest text-ink-faint dark:text-ink-faint-dark border border-rule dark:border-rule-dark px-2 py-1"
+                      className="font-mono text-[10px] uppercase tracking-widest text-ink-faint border border-rule px-2 py-1"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <p className="text-sm text-ink-soft dark:text-ink-dark/90 mt-3 max-w-2xl">
+                <p className="text-sm text-ink-soft mt-3 max-w-2xl">
                   {project.desc}
                 </p>
-                <p className="font-mono text-xs text-ink-faint dark:text-ink-faint-dark mt-3">
+                <p className="font-mono text-xs text-ink-faint mt-3">
                   {project.location}
                 </p>
               </div>
 
-              <div className="row-right relative w-full aspect-[4/3] overflow-hidden bg-paper-dim dark:bg-paper-dim-dark">
+              <div className="row-right relative w-full aspect-[4/3] overflow-hidden bg-paper-dim">
                 {image ? (
                   <Image
                     src={image}
@@ -161,7 +161,7 @@ export default function AcademicList() {
       {/* More coming section */}
       <div
         ref={closingRef}
-        className="w-full border-t border-rule dark:border-rule-dark py-16 px-8 flex flex-col items-center"
+        className="w-full border-t border-rule py-16 px-8 flex flex-col items-center"
       >
         <div className="w-16 h-px bg-accent-red mx-auto mb-8" />
 
@@ -171,21 +171,21 @@ export default function AcademicList() {
           More work in progress.
         </h2>
 
-        <p className="font-sans text-sm text-ink-soft dark:text-ink-soft-dark mt-3 text-center">
+        <p className="font-sans text-sm text-ink-soft mt-3 text-center">
           New projects being documented — check back soon or reach out directly.
         </p>
 
         <div className="flex gap-2 mt-6 items-center">
-          <span className="pulse-dot w-1.5 h-1.5 rounded-full bg-ink-faint dark:bg-ink-faint-dark" />
-          <span className="pulse-dot w-1.5 h-1.5 rounded-full bg-ink-faint dark:bg-ink-faint-dark" />
-          <span className="pulse-dot w-1.5 h-1.5 rounded-full bg-ink-faint dark:bg-ink-faint-dark" />
+          <span className="pulse-dot w-1.5 h-1.5 rounded-full bg-ink-faint" />
+          <span className="pulse-dot w-1.5 h-1.5 rounded-full bg-ink-faint" />
+          <span className="pulse-dot w-1.5 h-1.5 rounded-full bg-ink-faint" />
         </div>
 
         <Link
           href="https://behance.net/md_mahmudul_bappy"
           target="_blank"
           rel="noopener noreferrer"
-          className="behance-link mt-8 font-mono text-sm text-ink-soft dark:text-ink-soft-dark hover:text-accent-red transition-colors duration-200"
+          className="behance-link mt-8 font-mono text-sm text-ink-soft hover:text-accent-red transition-colors duration-200"
         >
           View all on Behance ↗
         </Link>

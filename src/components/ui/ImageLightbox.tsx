@@ -26,7 +26,7 @@ export default function ImageLightbox({ src, caption, onClose, onPrev, onNext }:
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-[9996] bg-ink/95 dark:bg-paper-dark/98 flex flex-col items-center justify-center px-6"
+        className="fixed inset-0 z-[9996] bg-ink/95 flex flex-col items-center justify-center px-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

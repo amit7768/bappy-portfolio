@@ -16,11 +16,11 @@ export default function EducationTimeline() {
           {EDUCATION.map((edu) => (
             <div
               key={edu.school}
-              className="flex justify-between items-baseline border-b border-rule dark:border-rule-dark py-4"
+              className="flex justify-between items-baseline border-b border-rule py-4"
             >
               <div>
                 <p className="font-serif text-lg">{edu.school}</p>
-                <p className="font-mono text-xs text-ink-faint dark:text-ink-faint-dark mt-1">
+                <p className="font-mono text-xs text-ink-faint mt-1">
                   {edu.detail}
                 </p>
               </div>

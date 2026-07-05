@@ -28,18 +28,30 @@ const FEATURED: FeaturedItem[] = [
     href: '/projects?tab=archviz',
     img: localImg('av-01.jpg'),
   },
+  {
+    title: 'Nexus-77 — Skyscraper',
+    href: '/projects?tab=academic',
+    img: localImg('ap-05-nexus.jpg'),
+    sheet: 'AP-05',
+  },
+  {
+    title: 'Apartment Complex at Narinda',
+    href: '/projects?tab=built',
+    img: localImg('bp-01-narinda-1.jpg'),
+    sheet: 'BP-01',
+  },
 ]
 
 export default function FeaturedWork() {
   return (
     <section className="max-w-site mx-auto px-6 py-16">
-      <SectionLabel label="Featured Work" count="3 Selected" />
+      <SectionLabel label="Featured Work" count="5 Selected" />
 
-      <div className="grid md:grid-cols-3 gap-6 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-6">
         {FEATURED.map((item, i) => (
           <RevealText key={item.title} delay={i * 0.1}>
             <Link href={item.href} className="block reveal-item group cursor-pointer">
-              <div className="relative aspect-[4/5] overflow-hidden bg-paper-dim dark:bg-paper-dim-dark">
+              <div className="relative aspect-[4/5] overflow-hidden bg-paper-dim">
                 {item.img && (
                   <div className="absolute inset-0 transition-transform duration-[600ms] ease-out group-hover:scale-[1.08]">
                     <Image src={item.img} alt={item.title} fill className="object-cover" unoptimized />
@@ -60,7 +72,7 @@ export default function FeaturedWork() {
                   {item.title}
                 </p>
                 {item.sheet && (
-                  <span className="font-mono text-xs text-ink-faint dark:text-ink-faint-dark transition-colors duration-200 group-hover:text-accent-red">
+                  <span className="font-mono text-xs text-ink-faint transition-colors duration-200 group-hover:text-accent-red">
                     {item.sheet}
                   </span>
                 )}
