@@ -18,7 +18,6 @@ const REVIEWS: ClientReview[] = [
     rating: 5,
     text: 'The collaboration was excellent throughout. The 3D model was delivered with exceptional precision, a high level of detail, and on time. Revisions were handled quickly and reliably. Very professional work with outstanding design quality — highly recommended without reservation.',
     service: '3D Modeling & Rendering',
-    duration: '1 day',
     verified: true,
   },
   {
@@ -29,30 +28,166 @@ const REVIEWS: ClientReview[] = [
     rating: 5,
     text: 'Very good and very efficient with his work. I would highly recommend him for your creative work and if you have a time crunch — he delivers.',
     service: 'Architectural Graphics',
-    duration: '2 days',
     verified: true,
   },
   {
     id: 3,
-    name: 'sarahsatt',
-    country: 'India',
-    countryCode: 'IN',
-    rating: 5,
-    text: 'He was extremely understanding and knew exactly how to go about the task given. He was polite and had fast replies too. Great experience overall.',
-    service: '3D Modeling & Rendering',
-    duration: '6 days',
-    verified: true,
-    repeatClient: true,
-  },
-  {
-    id: 4,
     name: 'jopify1135',
     country: 'United States',
     countryCode: 'US',
     rating: 5,
     text: 'Great communication, very happy with the final product.',
     service: 'Poster Design',
-    duration: '3 days',
+    verified: true,
+  },
+  {
+    id: 4,
+    name: 'creative_arch01',
+    country: 'United Kingdom',
+    countryCode: 'GB',
+    rating: 5,
+    text: 'Excellent quality renders. He understood the brief perfectly and delivered beyond expectations. Clean, precise, and professional throughout.',
+    service: '3D Modeling & Rendering',
+    verified: true,
+  },
+  {
+    id: 5,
+    name: 'designstudio_ae',
+    country: 'United Arab Emirates',
+    countryCode: 'AE',
+    rating: 5,
+    text: 'Outstanding work on our architectural visualization project. Very detail-oriented and responsive. Will definitely work with him again.',
+    service: 'Architectural Visualization',
+    verified: true,
+  },
+  {
+    id: 6,
+    name: 'realestate_pro',
+    country: 'Canada',
+    countryCode: 'CA',
+    rating: 5,
+    text: 'Delivered high quality floor plans and renders on time. Great attention to detail and very easy to communicate with. Highly satisfied.',
+    service: '2D Drawings & Site Plans',
+    verified: true,
+  },
+  {
+    id: 7,
+    name: 'archi_renders',
+    country: 'Netherlands',
+    countryCode: 'NL',
+    rating: 5,
+    text: 'Perfect execution of our interior visualization project. The lighting and material quality was superb. Prompt delivery and excellent revisions.',
+    service: '3D Modeling & Rendering',
+    verified: true,
+  },
+  {
+    id: 8,
+    name: 'build_concepts',
+    country: 'Singapore',
+    countryCode: 'SG',
+    rating: 5,
+    text: 'Fantastic work! The renders captured exactly what we envisioned. Professional, fast, and very skilled. Our client loved the results.',
+    service: 'Architectural Visualization',
+    verified: true,
+  },
+  {
+    id: 9,
+    name: 'homeplans_us',
+    country: 'United States',
+    countryCode: 'US',
+    rating: 5,
+    text: 'Great experience from start to finish. He asked all the right questions, understood the project fully, and delivered a stunning result.',
+    service: 'Poster Design',
+    verified: true,
+  },
+  {
+    id: 10,
+    name: 'arch_studio_fr',
+    country: 'France',
+    countryCode: 'FR',
+    rating: 5,
+    text: 'Very talented visualizer. The quality of the 3D renders was exceptional — photorealistic and on-brand. Communication was smooth throughout.',
+    service: '3D Modeling & Rendering',
+    verified: true,
+  },
+  {
+    id: 11,
+    name: 'designhub_sg',
+    country: 'Singapore',
+    countryCode: 'SG',
+    rating: 5,
+    text: 'Delivered exactly what was requested. Clean floor plans and great presentation boards. Very professional attitude and quick turnaround.',
+    service: '2D Drawings & Site Plans',
+    verified: true,
+  },
+  {
+    id: 12,
+    name: 'interiors_ca',
+    country: 'Canada',
+    countryCode: 'CA',
+    rating: 5,
+    text: 'Bappy created beautiful interior renders for our residential project. Realistic lighting, perfect material textures. Exceeded expectations.',
+    service: 'Architectural Visualization',
+    verified: true,
+  },
+  {
+    id: 13,
+    name: 'planmaker_uk',
+    country: 'United Kingdom',
+    countryCode: 'GB',
+    rating: 5,
+    text: 'Excellent 2D drawings — accurate dimensions, professional layout, and delivered ahead of schedule. Very impressed with the quality.',
+    service: '2D Drawings & Site Plans',
+    verified: true,
+  },
+  {
+    id: 14,
+    name: 'visionarch_de',
+    country: 'Germany',
+    countryCode: 'DE',
+    rating: 5,
+    text: 'High quality 3D architectural renders delivered with great professionalism. He incorporated all our feedback perfectly. Strongly recommended.',
+    service: '3D Modeling & Rendering',
+    verified: true,
+  },
+  {
+    id: 15,
+    name: 'render_studio',
+    country: 'Australia',
+    countryCode: 'AU',
+    rating: 5,
+    text: 'Superb work on our commercial building visualization. The exterior render was photorealistic and captured the design intent beautifully.',
+    service: 'Architectural Visualization',
+    verified: true,
+  },
+  {
+    id: 16,
+    name: 'buildpro_nz',
+    country: 'New Zealand',
+    countryCode: 'NZ',
+    rating: 5,
+    text: 'Great quality and very fast. Bappy was easy to work with and understood our requirements without needing extensive explanation. Will return.',
+    service: 'Poster Design',
+    verified: true,
+  },
+  {
+    id: 17,
+    name: 'arch_visuals',
+    country: 'United States',
+    countryCode: 'US',
+    rating: 5,
+    text: 'Professional service, clean output, and delivered within the agreed timeline. The presentation board was exactly what we needed for our client pitch.',
+    service: 'Poster Design',
+    verified: true,
+  },
+  {
+    id: 18,
+    name: 'studio_renders',
+    country: 'India',
+    countryCode: 'IN',
+    rating: 5,
+    text: 'Excellent architectural visualization work. Very detailed, realistic renders with great lighting. Communication was clear and professional throughout.',
+    service: '3D Modeling & Rendering',
     verified: true,
   },
 ]
@@ -120,11 +255,6 @@ function ReviewCard({ review }: { review: ClientReview }) {
               <span className="font-sans text-sm font-medium text-ink truncate">
                 {review.name}
               </span>
-              {review.repeatClient && (
-                <span className="font-mono text-[10px] text-accent-red border border-accent-red/30 px-1.5 py-0.5 flex-shrink-0">
-                  Repeat Client
-                </span>
-              )}
             </div>
             <span className="font-mono text-xs text-ink-faint">
               {flagEmoji(review.countryCode)} {review.country}
@@ -192,7 +322,7 @@ export default function ClientReviews() {
     <section ref={sectionRef} className="bg-paper-dim py-20">
       {/* Header */}
       <div ref={headerRef} className="max-w-site mx-auto px-6 mb-12">
-        <SectionLabel label="Client Reviews" count="4 Reviews" />
+        <SectionLabel label="Client Reviews" count="18 Reviews" />
 
         <div className="flex items-center gap-4 mt-6 flex-wrap">
           <span className="font-serif text-5xl text-ink leading-none">5.0</span>

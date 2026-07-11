@@ -65,7 +65,7 @@ export interface ClientReview {
   rating: number
   text: string
   service: string
-  duration: string
+  duration?: string
   verified: boolean
   repeatClient?: boolean
 }
