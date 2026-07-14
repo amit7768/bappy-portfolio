@@ -142,7 +142,7 @@
 }
 
 .marquee-left {
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 80s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
