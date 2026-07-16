@@ -5,7 +5,7 @@ import AwardsSection from '@/components/about/AwardsSection'
 import EducationTimeline from '@/components/about/EducationTimeline'
 
 export const metadata: Metadata = {
-  title: 'About — Mahmudul Hasan Bappy',
+  title: 'About — Md. Mahmudul Hasan Bappy',
   description: 'Architect and visualizer at KUET — background, skills, awards, and education.',
 }
 

@@ -20,7 +20,7 @@ export default function AboutHero() {
         <p className="font-mono text-xs uppercase tracking-widest text-ink-soft mb-4">
           — About
         </p>
-        <h1 className="font-serif text-4xl mb-2">Mahmudul Hasan Bappy</h1>
+        <h1 className="font-serif text-4xl mb-2">Md. Mahmudul Hasan Bappy</h1>
         <p className="font-mono text-xs text-ink-faint mb-6">
           Architect · Visualizer · Interior Designer
         </p>

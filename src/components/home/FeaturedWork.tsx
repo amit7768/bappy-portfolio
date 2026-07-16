@@ -15,18 +15,8 @@ const FEATURED: FeaturedItem[] = [
   {
     title: 'Ando Museum',
     href: '/projects?tab=academic',
-    img: localImg('featured-ando.jpg'),
+    img: localImg('ap-03-ando.jpg'),
     sheet: 'AP-03',
-  },
-  {
-    title: 'Monument of Resistance',
-    href: '/projects?tab=academic',
-    img: '/assets/monument-render.jpg',
-  },
-  {
-    title: 'Archviz — Visualization Work',
-    href: '/projects?tab=archviz',
-    img: localImg('av-01.jpg'),
   },
   {
     title: 'Nexus-77 — Skyscraper',
@@ -34,27 +24,6 @@ const FEATURED: FeaturedItem[] = [
     img: localImg('ap-05-nexus.jpg'),
     sheet: 'AP-05',
   },
-  {
-    title: 'Apartment Complex at Narinda',
-    href: '/projects?tab=built',
-    img: localImg('bp-01-narinda-1.jpg'),
-    sheet: 'BP-01',
-  },
-  {
-    title: 'Duplex Villa at Jatrabari',
-    href: '/projects?tab=built',
-    img: localImg('bp-02-villa-1.jpg'),
-    sheet: 'BP-02',
-  },
-  {
-    title: 'Cultural Community Club',
-    href: '/projects?tab=academic',
-    img: localImg('ap-02-cultural.jpg'),
-    sheet: 'AP-02',
-  },
-]
-
-const FEATURED_ROW2: FeaturedItem[] = [
   {
     title: 'Highway Restaurant & Fuel Station',
     href: '/projects?tab=academic',
@@ -85,17 +54,50 @@ const FEATURED_ROW2: FeaturedItem[] = [
     img: localImg('ap-06-pedestrian.jpg'),
     sheet: 'AP-06',
   },
+]
+
+const FEATURED_ROW2: FeaturedItem[] = [
   {
-    title: 'Duplex Villa at Jatrabari',
-    href: '/projects?tab=built',
-    img: localImg('bp-02-villa-1.jpg'),
-    sheet: 'BP-02',
+    title: 'Interior Design for Deshal',
+    href: '/projects?tab=academic',
+    img: localImg('ap-10-interior.jpg'),
+    sheet: 'AP-10',
   },
   {
     title: 'Studio Apartment on Mars',
     href: '/projects?tab=academic',
     img: localImg('ap-01-mars.jpg'),
     sheet: 'AP-01',
+  },
+  {
+    title: 'Archviz Render 1',
+    href: '/projects?tab=archviz',
+    img: localImg('av-01.jpg'),
+    sheet: 'RENDER',
+  },
+  {
+    title: 'Archviz Render 2',
+    href: '/projects?tab=archviz',
+    img: localImg('av-03.jpg'),
+    sheet: 'RENDER',
+  },
+  {
+    title: 'Archviz Render 3',
+    href: '/projects?tab=archviz',
+    img: localImg('av-05.jpg'),
+    sheet: 'RENDER',
+  },
+  {
+    title: 'Archviz Render 4',
+    href: '/projects?tab=archviz',
+    img: localImg('av-07.jpg'),
+    sheet: 'RENDER',
+  },
+  {
+    title: 'Archviz Render 5',
+    href: '/projects?tab=archviz',
+    img: localImg('av-09.jpg'),
+    sheet: 'RENDER',
   },
 ]
 
@@ -105,7 +107,7 @@ function CardGrid({ items, rowIndex }: { items: FeaturedItem[]; rowIndex: number
       {items.map((item, i) => (
         <RevealText key={item.title} delay={i * 0.05 + rowIndex * 0.15}>
           <Link href={item.href} className="block reveal-item group cursor-pointer">
-            <div className="relative aspect-[4/5] overflow-hidden bg-paper-dim">
+            <div className="relative aspect-square md:aspect-[4/5] overflow-hidden bg-paper-dim">
               {item.img && (
                 <div className="absolute inset-0 transition-transform duration-[600ms] ease-out group-hover:scale-[1.08]">
                   <Image src={item.img} alt={item.title} fill className="object-cover" unoptimized />
@@ -140,13 +142,15 @@ function CardGrid({ items, rowIndex }: { items: FeaturedItem[]; rowIndex: number
 
 export default function FeaturedWork() {
   return (
-    <section className="py-16">
+    <section className="pt-4 md:pt-16 pb-16">
       <div className="max-w-site mx-auto px-6 mb-6">
         <SectionLabel label="Featured Work" count="14 Selected" />
       </div>
 
-      <CardGrid items={FEATURED} rowIndex={0} />
-      <CardGrid items={FEATURED_ROW2} rowIndex={1} />
+      <div>
+        <CardGrid items={FEATURED} rowIndex={0} />
+        <CardGrid items={FEATURED_ROW2} rowIndex={1} />
+      </div>
     </section>
   )
 }

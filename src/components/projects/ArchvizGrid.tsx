@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import Image from 'next/image'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ARCHVIZ_RENDERS, ARCHVIZ_VIDEOS } from '@/data/archviz'
@@ -97,10 +96,10 @@ export default function ArchvizGrid() {
         ))}
       </div>
 
-      <div ref={gridRef} className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-1">
+      <div ref={gridRef} className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-[4px]">
         {visibleItems.map((item, idx) => {
           const isNew = showAll && idx >= INITIAL_SHOW
-          const itemClass = `${isNew ? 'archviz-new-item' : 'archviz-item'} mb-1 break-inside-avoid`
+          const itemClass = `${isNew ? 'archviz-new-item' : 'archviz-item'} mb-[4px] break-inside-avoid`
 
           return (
             <div key={`${item.type}-${idx}`} className={itemClass}>
@@ -111,13 +110,12 @@ export default function ArchvizGrid() {
                   className="group relative block w-full"
                   data-cursor-view
                 >
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={item.src}
                     alt={item.cap}
-                    width={400}
-                    height={500}
-                    unoptimized
-                    className="w-full h-auto"
+                    className="w-full h-auto block"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/40 transition-colors flex items-end p-3 opacity-0 group-hover:opacity-100">
                     <span className="font-mono text-xs text-paper">{item.cap}</span>
@@ -129,13 +127,12 @@ export default function ArchvizGrid() {
                   onClick={() => setActiveVideo(item.id)}
                   className="group relative block w-full"
                 >
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={item.thumb}
                     alt={item.cap}
-                    width={400}
-                    height={500}
-                    unoptimized
-                    className="w-full h-auto"
+                    className="w-full h-auto block"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="flex items-center justify-center w-14 h-14 rounded-full bg-white/90">
