@@ -6,6 +6,7 @@ export interface AcademicProject {
   location: string
   desc: string
   img: string | null
+  images: string[]
   behanceImg?: string | null
 }
 

@@ -1,5 +1,5 @@
 import type { ArchvizRender, ArchvizVideo } from '@/types'
-import { localImg, driveImg } from '@/lib/drive'
+import { localImg } from '@/lib/drive'
 
 export const ARCHVIZ_RENDERS: ArchvizRender[] = [
   { src: localImg('av-01.jpg'), cap: 'Interior — warm evening light' },
@@ -22,14 +22,11 @@ export const ARCHVIZ_RENDERS: ArchvizRender[] = [
   { src: localImg('av-18.jpg'), cap: 'Photorealistic render' },
   { src: localImg('av-19.jpg'), cap: 'Night render' },
   { src: localImg('av-20.jpg'), cap: 'Composition study' },
-  { src: driveImg('1-3uHlG5OHShaFvA3FPBKEzecMYpo7_FH', 'w400'), cap: 'Architectural detail' },
-  { src: driveImg('1UdlFMDs3k1Qe3z24EXFpzzekgpxy90Ta', 'w400'), cap: 'Render study' },
-  { src: driveImg('1UvFxZ4WN27R8CIwgZCqf0DWjAkbtC0Rv', 'w400'), cap: 'Spatial render' },
-  { src: driveImg('1OOr2BH3w4atY3qr2ggt9Ke4fAwDiCiE9', 'w400'), cap: 'Volume study' },
-  { src: driveImg('10n48hkPUfHWQy41nA4eU-ofpvE9w5cSV', 'w400'), cap: 'Final render' },
-  { src: driveImg('17Puqo-nTXha6JCIes3__a0AI-BiIA0E7', 'w400'), cap: 'Visualization study' },
-  { src: driveImg('13EyNQxQpwDkRCzskvcgWm3vDTHr2gFnj', 'w400'), cap: 'Perspective study' },
-  { src: driveImg('1OOr2BH3w4atY3qr2ggt9Ke4fAwDiCiE9', 'w400'), cap: 'Render composition' },
+  { src: localImg('av-21.jpg'), cap: 'Architectural detail' },
+  { src: localImg('av-22.jpg'), cap: 'Render study' },
+  { src: localImg('av-23.jpg'), cap: 'Spatial render' },
+  { src: localImg('av-24.jpg'), cap: 'Volume study' },
+  { src: localImg('av-25.jpg'), cap: 'Final render' },
 ]
 
 export const ARCHVIZ_VIDEOS: ArchvizVideo[] = [

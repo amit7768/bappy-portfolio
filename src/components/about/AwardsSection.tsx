@@ -3,6 +3,7 @@ import { AWARDS } from '@/data/awards'
 import SheetRef from '@/components/ui/SheetRef'
 import SectionLabel from '@/components/ui/SectionLabel'
 import RevealText from '@/components/ui/RevealText'
+import KUETLogo from '@/components/ui/KUETLogo'
 
 export default function AwardsSection() {
   return (
@@ -31,8 +32,10 @@ export default function AwardsSection() {
               </div>
 
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-paper-dim">
-                {award.img && (
-                  <Image src={award.img} alt={award.title} fill className="object-cover" />
+                {award.img ? (
+                  <Image src={award.img} alt={award.title} fill unoptimized className="object-cover" />
+                ) : (
+                  <KUETLogo />
                 )}
               </div>
             </div>

@@ -10,7 +10,7 @@ import ImageLightbox from '@/components/ui/ImageLightbox'
 import VideoLightbox from '@/components/ui/VideoLightbox'
 import MoreComingPanel from '@/components/ui/MoreComingPanel'
 
-const INITIAL_SHOW = 16
+const INITIAL_SHOW = 12
 
 type Filter = 'all' | 'renders' | 'walkthrough'
 
@@ -149,24 +149,26 @@ export default function ArchvizGrid() {
       </div>
 
       {hasMore && (
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-12">
           <button
             type="button"
             onClick={handleLoadMore}
-            className="font-mono text-xs uppercase tracking-widest px-6 py-3 border border-rule text-ink-soft hover:border-ink:border-ink-dark hover:text-ink:text-ink-dark transition-colors duration-200"
+            className="font-mono text-xs uppercase tracking-widest px-6 py-3 border border-rule text-ink-soft hover:border-ink hover:text-ink transition-colors duration-200"
           >
             Load More ({items.length - INITIAL_SHOW} remaining)
           </button>
         </div>
       )}
 
-      <MoreComingPanel
-        heading="More renders being added."
-        sub="New visualization work is uploaded regularly — follow on Behance for the latest."
-        ctaText="Follow on Behance ↗"
-        ctaHref="https://behance.net/md_mahmudul_bappy"
-        ctaExternal
-      />
+      <div className="pt-8">
+        <MoreComingPanel
+          heading="More renders being added."
+          sub="New visualization work is uploaded regularly — follow on Behance for the latest."
+          ctaText="Follow on Behance ↗"
+          ctaHref="https://behance.net/md_mahmudul_bappy"
+          ctaExternal
+        />
+      </div>
 
       {activeImage && (
         <ImageLightbox
