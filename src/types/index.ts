@@ -32,7 +32,7 @@ export interface ArchvizRender {
 }
 
 export interface ArchvizVideo {
-  id: string
+  src: string
   cap: string
   thumb: string
 }

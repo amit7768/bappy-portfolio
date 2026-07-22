@@ -43,12 +43,15 @@ export default function VideoLightbox({ src, onClose }: VideoLightboxProps) {
           style={{ width: 'min(90vw, 1200px)', aspectRatio: '16 / 9' }}
           onClick={(e) => e.stopPropagation()}
         >
-          <iframe
+          <video
             src={src}
+            controls
+            autoPlay
             className="w-full h-full"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-          />
+            style={{ maxHeight: '80vh' }}
+          >
+            Your browser does not support the video tag.
+          </video>
         </motion.div>
       </motion.div>
     </AnimatePresence>

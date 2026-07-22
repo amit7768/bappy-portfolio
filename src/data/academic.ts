@@ -117,6 +117,8 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     images: [
       localImg('ap-08-housing.jpg'),
       localImg('ap-08-b.jpg'),
+      localImg('ap-08-c.jpg'),
+      localImg('ap-08-d.jpg'),
     ],
     behanceImg: null,
   },
@@ -145,6 +147,8 @@ export const ACADEMIC_PROJECTS: AcademicProject[] = [
     images: [
       localImg('ap-10-interior.jpg'),
       localImg('ap-10-b.jpg'),
+      localImg('ap-10-c.jpg'),
+      localImg('ap-10-d.jpg'),
     ],
     behanceImg: null,
   },

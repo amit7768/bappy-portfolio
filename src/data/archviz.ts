@@ -31,17 +31,17 @@ export const ARCHVIZ_RENDERS: ArchvizRender[] = [
 
 export const ARCHVIZ_VIDEOS: ArchvizVideo[] = [
   {
-    id: '1esPT1R7ENzM-eR07EPTjr1dVjtfgeiT4',
+    src: '/videos/walkthrough-1.mp4',
     cap: 'Walkthrough — Visualization 01',
     thumb: localImg('av-02.jpg'),
   },
   {
-    id: '1_70mw-EwpP_G1y0-6s9Kb4LU_uKNfd-n',
+    src: '/videos/walkthrough-2.mp4',
     cap: 'Walkthrough — Visualization 02',
     thumb: localImg('av-01.jpg'),
   },
   {
-    id: '12SiJNBssYge37uonZcn-ig4uG-huQP9J',
+    src: '/videos/walkthrough-3.mp4',
     cap: 'Walkthrough — Visualization 03',
     thumb: localImg('av-07.jpg'),
   },

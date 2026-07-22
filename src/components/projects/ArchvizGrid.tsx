@@ -4,7 +4,6 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ARCHVIZ_RENDERS, ARCHVIZ_VIDEOS } from '@/data/archviz'
-import { driveVideo } from '@/lib/drive'
 import SectionLabel from '@/components/ui/SectionLabel'
 import ImageLightbox from '@/components/ui/ImageLightbox'
 import VideoLightbox from '@/components/ui/VideoLightbox'
@@ -16,7 +15,7 @@ type Filter = 'all' | 'renders' | 'walkthrough'
 
 type GridItem =
   | { type: 'render'; src: string; cap: string }
-  | { type: 'video'; id: string; cap: string; thumb: string }
+  | { type: 'video'; src: string; cap: string; thumb: string }
 
 export default function ArchvizGrid() {
   const [filter, setFilter] = useState<Filter>('all')
@@ -124,7 +123,7 @@ export default function ArchvizGrid() {
               ) : (
                 <button
                   type="button"
-                  onClick={() => setActiveVideo(item.id)}
+                  onClick={() => setActiveVideo(item.src)}
                   className="group relative block w-full"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -177,7 +176,7 @@ export default function ArchvizGrid() {
         />
       )}
       {activeVideo && (
-        <VideoLightbox src={driveVideo(activeVideo)} onClose={() => setActiveVideo(null)} />
+        <VideoLightbox src={activeVideo} onClose={() => setActiveVideo(null)} />
       )}
     </div>
   )

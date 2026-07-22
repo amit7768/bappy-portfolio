@@ -23,6 +23,6 @@ export const AWARDS: Award[] = [
     title: "General Member — Architecture Students' Association, KUET",
     note: 'Contributing member 2023–24. Active in design exhibitions, departmental events, and community initiatives for the Department of Architecture.',
     year: '2023–24',
-    img: null,
+    img: '/assets/projects/kuet-logo.jpg',
   },
 ]
