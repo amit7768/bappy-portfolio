@@ -193,14 +193,6 @@ const REVIEWS: ClientReview[] = [
 ]
 
 
-function flagEmoji(code: string): string {
-  return code
-    .toUpperCase()
-    .split('')
-    .map((c) => String.fromCodePoint(0x1f1e6 + c.charCodeAt(0) - 65))
-    .join('')
-}
-
 function StarRating({ rating }: { rating: number }) {
   return (
     <div className="flex items-center gap-1">
@@ -257,7 +249,15 @@ function ReviewCard({ review }: { review: ClientReview }) {
               </span>
             </div>
             <span className="font-mono text-xs text-ink-faint">
-              {flagEmoji(review.countryCode)} {review.country}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`https://flagcdn.com/20x15/${review.countryCode.toLowerCase()}.png`}
+                alt={review.country}
+                width={20}
+                height={15}
+                style={{ display: 'inline', marginRight: '4px', verticalAlign: 'middle' }}
+              />
+              {review.country}
             </span>
           </div>
         </div>
